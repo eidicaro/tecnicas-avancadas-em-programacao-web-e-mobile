@@ -1,2 +1,2 @@
-# T-cnicas-Avan-adas-em-Programa-o-web-e-Mobile
+# tecnicas-avancadas-em-programacao-web-e-mobile
 Eba fatéqui
