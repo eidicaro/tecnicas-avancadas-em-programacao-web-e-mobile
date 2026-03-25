@@ -1,34 +1,44 @@
-import {View, Text, Image, Button} from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import styles from './StyleHome';
 import { useState } from 'react';
 
 export default function Home(){
-    const [mensagem, setMensagem] = useState('sua sorte de hoje é')
 
-    const abrir = ()=> {
-        const numero = Math.floor(Math.random()*10)
-        const frases = [
-            "tenha bom dia",
-            "nobruzera apelão",
-            "isack gostoso1",
-            "isack gostoso2",
-            "isack gostoso3",
-            "isack gostoso4",
-            "isack gostoso5",
-            "isack gostosasso1",
-            "isack gostosasso2",
-            "isack gostosasso3",
-        ]
-        setMensagem(frases[numero])
+    const [mensagem, setMensagem] = useState("");
+    const [nome, setNome] = useState("");
+    const [email, setEmail] = useState("");
+    const [telefone, setTelefone] = useState("");
+    const [senha, setSenha] = useState("");
+
+    const abrir = () => {
+        setMensagem("Cadastro concluído com sucesso!");
     }
 
     return(
-
         <View style={styles.container}>
-            <Image source={require('../assets/biscoito.png')} style={styles.img}/>
-            <Text style={styles.text}>Aoba</Text>
-            <Button title="abrir-biscoito" onPress={abrir} />
-            <Text style={styles.text}>{mensagem}</Text>
+
+            <Text style={styles.titulo}>Seja Bem Vindo ao Shopping fontèè</Text>
+
+            <TouchableOpacity style={styles.botao} onPress={abrir}>
+                <Text style={styles.textoBotao}>Lojas</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botao} onPress={abrir}>
+                <Text style={styles.textoBotao}>Restaurantes</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botao} onPress={abrir}>
+                <Text style={styles.textoBotao}>Cinema</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botao} onPress={abrir}>
+                <Text style={styles.textoBotao}>Promoções</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botao} onPress={abrir}>
+                <Text style={styles.textoBotao}>Mapa do Shopping</Text>
+            </TouchableOpacity>
+
         </View>
     )
 }
