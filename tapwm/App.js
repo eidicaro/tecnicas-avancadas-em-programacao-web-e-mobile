@@ -4,11 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './src/Home';
-import Lojas from './src/Lojas';
-import Restaurantes from './src/Restaurantes';
-import Cinema from './src/Cinema';
-import Promocoes from './src/Promocoes';
-import Mapa from './src/Mapa';
+import Lojas from './src/lojas';
+import Restaurantes from './src/restaurantes';
+import Cinema from './src/cinema';
+import Promocoes from './src/promocoes';
+import Mapa from './src/mapa';
 
 const Stack = createNativeStackNavigator();
 
